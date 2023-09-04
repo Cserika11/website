@@ -1,0 +1,70 @@
+:root {
+    --color-white: #F1F1F1;
+    --color-gray: #EE1E1;
+    --color-black: #343440;
+    --color-accent: linear-gradient(90deg, #0FBA77, #6F0FBA);
+    --color-pastel: linear-gradient(90deg, #99FFD6, #D299FF);
+    font-family: "Raleway";
+    font-size: 12px;
+    color: var(--color-black);
+}
+
+.color-demo {
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    background: white;
+}
+
+.color-demo:nth-child(1) {
+    background: var(--color-white);
+}
+
+.color-demo:nth-child(2) {
+    background: var(--color-black);
+}
+
+.color-demo:nth-child(3) {
+    background: var(--color-accent);
+}
+
+.color-demo:nth-child(3) {
+    background: var(--color-accent);
+}
+
+.color-demo:nth-child(4) {
+    background: var(--color-pastel);
+}
+
+.text-xl {
+    font-size: 4rem;
+}
+
+h1 {
+    display: inline-block;
+    box-shadow: 10px 10px var(--color-pastel);
+    font-weight: normal;
+    position: relative;
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    width: 1em;
+    height: 50%;
+    top: 0.36em;
+    transform: translate(-5%);
+    z-index: -1;
+    background: var(--color-pastel);
+    transition: width 0.1s;
+    transition-timing-function: linear;
+}
+
+h1:hover::before {
+    width: 110%;
+}
+p {
+    font-size: 2em;
+}
